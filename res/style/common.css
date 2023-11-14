@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --el-color-white: #ffffff;
+    --el-color-black: #000000;
+    --el-color-success: #67c23a;
+    --el-color-success-light-3: #95d475;
+    --el-color-success-light-5: #b3e19d;
+    --el-color-success-light-7: #d1edc4;
+    --el-color-success-light-8: #e1f3d8;
+    --el-color-success-light-9: #f0f9eb;
+    --el-color-success-dark-2: #529b2e;
+    --el-color-warning: #e6a23c;
+    --el-color-warning-light-3: #eebe77;
+    --el-color-warning-light-5: #f3d19e;
+    --el-color-warning-light-7: #f8e3c5;
+    --el-color-warning-light-8: #faecd8;
+    --el-color-warning-light-9: #fdf6ec;
+    --el-color-warning-dark-2: #b88230;
+    --el-color-danger: #f56c6c;
+    --el-color-danger-light-3: #f89898;
+    --el-color-danger-light-5: #fab6b6;
+    --el-color-danger-light-7: #fcd3d3;
+    --el-color-danger-light-8: #fde2e2;
+    --el-color-danger-light-9: #fef0f0;
+    --el-color-danger-dark-2: #c45656;
+
+    --fh-color-darkmode-primary: #ffffff;
+    --fh-color-darkmode-regular: #c0c4cc;
+    --fh-color-darkmode-secondary: #a8abb2;
+    --fh-color-darkmode-placeholder: #909399;
+    --fh-color-darkmode-disabled: #606266;
+}
+
+body {
+    background-color: #000000;
+    color: var(--fh-color-darkmode-primary);
+}
+
+#game {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@keyframes animation-show-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.animation-show-in {
+    animation: animation-show-in .7s ease-out 0s 1;
+}
+
+.animation-show-in-children>* {
+    animation: animation-show-in .7s ease-out 0s 1;
+}
+
+.animation-hide {
+    opacity: 0;
+    transition: opacity .7s ease-in;
+    pointer-events: none;
+}
+
+
+#game-title {
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+#btn-game-start {
+    font-size: 20px;
+    cursor: pointer;
+}

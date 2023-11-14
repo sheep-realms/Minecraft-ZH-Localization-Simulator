@@ -1,0 +1,226 @@
+#player-target {
+    display: flex;
+    gap: 32px;
+    height: max(25vh, 160px);
+}
+
+.target-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.target-item .icon {
+    width: 48px;
+    height: 48px;
+    fill: #FFFFFF;
+    transition: fill .7s;
+}
+
+.target-item .arrow {
+    width: 32px;
+    height: 32px;
+    fill: #FFFFFF;
+}
+
+.target-item .up {
+    fill: var(--el-color-success);
+}
+
+.target-item .down {
+    fill: var(--el-color-danger);
+}
+
+#player-target.show .target-item .arrow {
+    opacity: 0;
+    transition: opacity .7s ease-in;
+    pointer-events: none;
+}
+
+.target-item.value-1 .icon { fill: var(--el-color-success-light-9); }
+.target-item.value-2 .icon { fill: var(--el-color-success-light-8); }
+.target-item.value-3 .icon { fill: var(--el-color-success-light-7); }
+.target-item.value-4 .icon { fill: var(--el-color-success-light-5); }
+.target-item.value-5 .icon { fill: var(--el-color-success-light-3); }
+.target-item.value-6 .icon { fill: var(--el-color-success); }
+.target-item.value-7 .icon { fill: var(--el-color-success-dark-2); }
+
+.target-item.value--1 .icon { fill: var(--el-color-danger-light-9); }
+.target-item.value--2 .icon { fill: var(--el-color-danger-light-8); }
+.target-item.value--3 .icon { fill: var(--el-color-danger-light-7); }
+.target-item.value--4 .icon { fill: var(--el-color-danger-light-5); }
+.target-item.value--5 .icon { fill: var(--el-color-danger-light-3); }
+.target-item.value--6 .icon { fill: var(--el-color-danger); }
+.target-item.value--7 .icon { fill: var(--el-color-danger-dark-2); }
+
+#event {
+    width: min(100vw, 1200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+#event .meta {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 75vw;
+}
+
+.event-original {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.event-title {
+    font-size: 28px;
+    font-weight: 200;
+    margin-bottom: 16px;
+}
+
+.event-description {
+    color: var(--fh-color-darkmode-regular);
+}
+
+#event .select {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-evenly;
+    width: max(75vw, 1000px);
+}
+
+.option-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    cursor: pointer;
+    height: 100%;
+    opacity: 0.5;
+    transition: opacity .3s;
+}
+
+.option-item .title {
+    font-size: 28px;
+    font-weight: 200;
+    position: relative;
+    top: 0px;
+    transition: top .3s;
+}
+
+.option-item .description {
+    color: var(--fh-color-darkmode-secondary);
+    position: relative;
+    top: 0px;
+    transition: top .3s;
+}
+
+.option-item:hover {
+    opacity: 1;
+}
+
+.option-item:hover .title,
+.option-item:hover .description {
+    top: -8px;
+}
+
+.option-item.selected .title,
+.option-item.selected .description {
+    top: -64px;
+    transition: top .7s ease-in;
+}
+
+
+
+#chapter,
+#dead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    user-select: none;
+}
+
+#chapter .icon,
+#dead .icon {
+    width: 128px;
+    height: 128px;
+    fill: var(--fh-color-darkmode-secondary);
+}
+
+#chapter .meta-chapter,
+#dead .meta-chapter {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+#chapter .meta-title,
+#dead .meta-title {
+    font-size: 48px;
+    font-weight: 200;
+    margin-bottom: 16px;
+}
+
+#dead .meta-title {
+    margin-top: 16px;
+}
+
+#chapter .meta-description,
+#dead .meta-description {
+    color: var(--fh-color-darkmode-regular);
+    margin-bottom: 16px;
+}
+
+#chapter .chapter-next,
+#dead .chapter-next {
+    margin-top: 32px;
+    font-weight: 100;
+    color: var(--fh-color-darkmode-secondary);
+    opacity: 0;
+    transition: opacity .7s;
+}
+
+#chapter.animation-show-in,
+#dead.animation-show-in {
+    animation: animation-show-in 2s ease-out 0s 1;
+}
+
+#chapter.ready,
+#dead.ready {
+    cursor: pointer;
+}
+
+#chapter.ready .chapter-next,
+#dead.ready .chapter-next {
+    opacity: 1;
+}
+
+#chapter.hide,
+#dead.hide {
+    opacity: 0;
+    transition: opacity 2s ease-in;
+    pointer-events: none;
+}
+
+#chapter .icon-list,
+#dead .icon-list {
+    display: flex;
+    gap: 16px;
+}

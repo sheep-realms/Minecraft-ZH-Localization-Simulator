@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏结束</title>
+    <link rel="stylesheet" href="res/style/common.css">
+    <link rel="stylesheet" href="res/style/story.css">
+    <script src="lib/jquery-1.7.2.min.js"></script>
+    <script src="res/class/Icon.js"></script>
+</head>
+<body>
+    <div id="game">
+        <div id="chapter" class="animation-show-in">
+            <div class="icon-list">
+                <div class="icon"></div>
+            </div>
+            <div class="meta-title">游戏结束</div>
+            <div class="meta-description">您犯下了太多的错误，已经达到了不可容忍的地步。</div>
+            <div class="chapter-next">点击任意位置以继续</div>
+        </div>
+    </div>
+
+    <script>
+        $('#chapter .icon').html(Icon.checkCircleOutline());
+
+        $('#game').on('click', '#chapter.ready', function() {
+            $('#chapter').attr('class', 'hide');
+        });
+
+        setTimeout(function () {
+            $('#chapter').attr('class', 'ready');
+        }, 2000);
+    </script>
+</body>
+</html>

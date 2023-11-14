@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件</title>
+    <link rel="stylesheet" href="res/style/common.css">
+    <link rel="stylesheet" href="res/style/story.css">
+    <script src="lib/jquery-1.7.2.min.js"></script>
+    <script src="res/class/Icon.js"></script>
+</head>
+<body>
+    <div id="game">
+        <div id="player-target">
+            <div id="target-accuracy" class="target-item value-2">
+                <div class="arrow up"></div>
+                <div class="icon"></div>
+                <div class="arrow down"></div>
+            </div>
+            <div id="target-sense" class="target-item value-5">
+                <div class="arrow up"></div>
+                <div class="icon"></div>
+                <div class="arrow down"></div>
+            </div>
+            <div id="target-acceptability" class="target-item value--3">
+                <div class="arrow up"></div>
+                <div class="icon"></div>
+                <div class="arrow down"></div>
+            </div>
+        </div>
+
+        <div id="event">
+            <div class="meta">
+                <div class="event-original">Creeper</div>
+                <div class="event-title">选择译名</div>
+                <div class="event-description">它会悄无声息地接近玩家，然后爆炸。</div>
+            </div>
+
+            <div class="select">
+                <div class="option-item">
+                    <div class="title">爬行者</div>
+                    <div class="description">决定译名</div>
+                </div>
+                <div class="option-item">
+                    <div class="title">苦力怕</div>
+                    <div class="description">决定译名</div>
+                </div>
+                <div class="option-item">
+                    <div class="title">JJ怪</div>
+                    <div class="description">决定译名</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#target-accuracy .icon').html(Icon.checkCircleOutline());
+        $('#target-sense .icon').html(Icon.lightbulbOnOutline());
+        $('#target-acceptability .icon').html(Icon.forumOutline());
+
+        $('.target-item .up').html(Icon.chevronDoubleUp());
+        $('.target-item .down').html(Icon.chevronDoubleDown());
+    </script>
+</body>
+</html>
