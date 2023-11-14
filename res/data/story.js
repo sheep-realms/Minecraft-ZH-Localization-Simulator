@@ -1116,7 +1116,7 @@ const db_story = [
                         },
                         target_change: {
                             accuracy: 1,
-                            sense: 1
+                            sense: 2
                         }
                     }, {
                         meta: {
@@ -1125,26 +1125,26 @@ const db_story = [
                         },
                         target_change: {
                             accuracy: -1,
-                            sense: 1
+                            sense: 2
                         }
                     }, {
                         meta: {
-                            title: "微风人",
+                            title: "凛风人",
                             description: "决定译名"
                         },
                         target_change: {
                             accuracy: 1,
-                            sense: 2,
+                            sense: 1,
                             acceptability: -1
                         }
                     }, {
                         meta: {
-                            title: "微风使者",
+                            title: "凛风使者",
                             description: "决定译名"
                         },
                         target_change: {
                             accuracy: -1,
-                            sense: 2
+                            sense: 1
                         }
                     }
                 ],
@@ -1179,7 +1179,7 @@ const db_story = [
                         },
                         target_change: {
                             accuracy: -1,
-                            sense: 1
+                            sense: 2
                         }
                     }, {
                         meta: {
@@ -1188,26 +1188,26 @@ const db_story = [
                         },
                         target_change: {
                             accuracy: 1,
-                            sense: 1
+                            sense: 2
                         }
                     }, {
                         meta: {
-                            title: "微风人",
+                            title: "凛风人",
                             description: "决定译名"
                         },
                         target_change: {
                             accuracy: -1,
-                            sense: 2,
+                            sense: 1,
                             acceptability: -1
                         }
                     }, {
                         meta: {
-                            title: "微风使者",
+                            title: "凛风使者",
                             description: "决定译名"
                         },
                         target_change: {
                             accuracy: 1,
-                            sense: 2
+                            sense: 1
                         }
                     }
                 ],
