@@ -128,7 +128,7 @@ const db_story = [
         },
         icon: "lightbulbOnOutline",
         new_target: "sense",
-        choice_limit: 5,
+        choice_limit: 8,
         events: [
             // 红石中继器
             {
@@ -234,7 +234,7 @@ const db_story = [
                             description: "决定译名"
                         },
                         target_change: {
-                            accuracy: -1,
+                            accuracy: 1,
                             stability: -1
                         }
                     }
@@ -358,6 +358,186 @@ const db_story = [
                             accuracy: 1,
                             sense: -2,
                             stability: -2
+                        }
+                    }
+                ],
+                require: true
+            },
+
+            // 速度
+            {
+                type: "choice",
+                id : "s2_007",
+                meta: {
+                    title: "选择译名",
+                    description: "一种提升生物行走速度的状态效果。",
+                    image: "",
+                    original: "Speed",
+                    meta_id: "effect:speed"
+                },
+                options: [
+                    {
+                        meta: {
+                            title: "速度",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            accuracy: 1
+                        }
+                    }, {
+                        meta: {
+                            title: "迅捷",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            sense: 2
+                        }
+                    }, {
+                        meta: {
+                            title: "加速",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            sense: 1
+                        }
+                    }
+                ]
+            },
+
+            // 桶
+            {
+                type: "choice",
+                id : "s2_008",
+                meta: {
+                    title: "选择译名",
+                    description: "一种用于携带流体的工具。",
+                    image: "",
+                    original: "Bucket",
+                    meta_id: "item:bucket"
+                },
+                options: [
+                    {
+                        meta: {
+                            title: "桶",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            accuracy: 1
+                        }
+                    }, {
+                        meta: {
+                            title: "铁桶",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            accuracy: -1,
+                            sense: 1
+                        }
+                    }
+                ]
+            },
+
+            // 摔落缓冲
+            {
+                type: "choice",
+                id : "s2_009",
+                meta: {
+                    title: "选择译名",
+                    description: "一种用于剑或斧的魔咒，能对僵尸、骷髅等一类的生物造成额外伤害。",
+                    image: "",
+                    original: "Feather Falling",
+                    meta_id: "enchantments:feather_falling"
+                },
+                options: [
+                    {
+                        meta: {
+                            title: "摔落保护",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            accuracy: -1,
+                            sense: 2,
+                        }
+                    }, {
+                        meta: {
+                            title: "摔落缓冲",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            sense: 1
+                        }
+                    }, {
+                        meta: {
+                            title: "羽落",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            accuracy: 1,
+                            sense: -1
+                        }
+                    }
+                ]
+            },
+
+            // 奶桶
+            {
+                type: "choice",
+                id : "s2_010",
+                meta: {
+                    title: "选择译名",
+                    description: "一种从牛或哞菇处获得的桶装可饮用物品。",
+                    image: "",
+                    original: "Milk Bucket",
+                    meta_id: "item:milk_bucket"
+                },
+                options: [
+                    {
+                        meta: {
+                            title: "牛奶桶",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            sense: 1
+                        }
+                    }, {
+                        meta: {
+                            title: "奶桶",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            accuracy: 1
+                        }
+                    }
+                ]
+            },
+
+            // 烈焰人
+            {
+                type: "choice",
+                id : "s2_011",
+                meta: {
+                    title: "选择译名",
+                    description: "一种生成在下界具有火焰和浓烟特征的飞行敌对生物。",
+                    image: "",
+                    original: "Blaze",
+                    meta_id: "mob:blaze"
+                },
+                options: [
+                    {
+                        meta: {
+                            title: "烈焰人",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            sense: 2
+                        }
+                    }, {
+                        meta: {
+                            title: "烈焰使者",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            sense: 1
                         }
                     }
                 ],
@@ -544,7 +724,7 @@ const db_story = [
                 require: true
             },
 
-            // 下界合金
+            // 下界合金 A
             {
                 type: "choice",
                 id : "s3_004",
@@ -602,7 +782,7 @@ const db_story = [
                 require: true
             },
 
-            // 下界合金
+            // 下界合金 B
             {
                 type: "choice",
                 id : "s3_004b",
@@ -799,6 +979,282 @@ const db_story = [
                 ],
                 require: true
             },
+        ]
+    },
+
+    // 第四幕
+    {
+        meta: {
+            chapter: "第四幕",
+            title: "隐患",
+            description: "未经过深思熟虑的译名会给未来埋下一颗定时炸弹。"
+        },
+        icon: "bomb",
+        choice_limit: 5,
+        events: [
+            // 奶桶
+            {
+                type: "choice",
+                id : "s4_001",
+                conditions: [
+                    {
+                        type: "check_translate",
+                        value: {
+                            meta_id: "item:milk_bucket",
+                            name: "牛奶桶"
+                        }
+                    }
+                ],
+                meta: {
+                    title: "更改译名",
+                    description: "新生物山羊也会产奶了，“牛奶桶”这个名字已不再适用。",
+                    image: "",
+                    original: "Milk Bucket",
+                    meta_id: "item:milk_bucket"
+                },
+                options: [
+                    {
+                        meta: {
+                            title: "奶桶",
+                            description: "更改译名"
+                        },
+                        target_change: {
+                            accuracy: 1,
+                            sense: -1,
+                            acceptability: 1
+                        }
+                    }, {
+                        meta: {
+                            title: "牛奶桶",
+                            description: "保持现状"
+                        },
+                        target_change: {
+                            accuracy: -2,
+                            sense: -1,
+                            acceptability: -3
+                        }
+                    }
+                ],
+                require: true
+            },
+
+            // 豹猫
+            {
+                type: "choice",
+                id : "s4_002",
+                conditions: [
+                    {
+                        type: "check_translate",
+                        value: {
+                            meta_id: "mob:ocelot",
+                            name: "豹猫"
+                        }
+                    }
+                ],
+                meta: {
+                    title: "更改译名",
+                    description: "有人认为“豹猫”并不是正确翻译，应该译为“虎猫”或“美洲豹”。",
+                    image: "",
+                    original: "Ocelot",
+                    meta_id: "mob:ocelot"
+                },
+                options: [
+                    {
+                        meta: {
+                            title: "虎猫",
+                            description: "更改译名"
+                        },
+                        target_change: {
+                            accuracy: 1,
+                            acceptability: -1
+                        }
+                    }, {
+                        meta: {
+                            title: "美洲豹",
+                            description: "更改译名"
+                        },
+                        target_change: {
+                            accuracy: 1,
+                            acceptability: -2
+                        }
+                    }, {
+                        meta: {
+                            title: "豹猫",
+                            description: "保持现状"
+                        },
+                        target_change: {}
+                    }
+                ],
+                require: true
+            },
+
+            // 旋风人 A
+            {
+                type: "choice",
+                id : "s4_003",
+                conditions: [
+                    {
+                        type: "check_translate",
+                        value: {
+                            meta_id: "mob:blaze",
+                            name: "烈焰人"
+                        }
+                    }
+                ],
+                meta: {
+                    title: "选择译名",
+                    description: "一种只在地下某结构特定房间生成的使用风弹攻击的敌对生物。",
+                    image: "",
+                    original: "Breeze",
+                    meta_id: "mob:breeze"
+                },
+                options: [
+                    {
+                        meta: {
+                            title: "旋风人",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            accuracy: 1,
+                            sense: 1
+                        }
+                    }, {
+                        meta: {
+                            title: "旋风使者",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            accuracy: -1,
+                            sense: 1
+                        }
+                    }, {
+                        meta: {
+                            title: "微风人",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            accuracy: 1,
+                            sense: 2,
+                            acceptability: -1
+                        }
+                    }, {
+                        meta: {
+                            title: "微风使者",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            accuracy: -1,
+                            sense: 2
+                        }
+                    }
+                ],
+                require: true
+            },
+
+            // 旋风人 B
+            {
+                type: "choice",
+                id : "s4_003b",
+                conditions: [
+                    {
+                        type: "check_translate",
+                        value: {
+                            meta_id: "mob:blaze",
+                            name: "烈焰使者"
+                        }
+                    }
+                ],
+                meta: {
+                    title: "选择译名",
+                    description: "一种只在地下某结构特定房间生成的使用风弹攻击的敌对生物。",
+                    image: "",
+                    original: "Breeze",
+                    meta_id: "mob:breeze"
+                },
+                options: [
+                    {
+                        meta: {
+                            title: "旋风人",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            accuracy: -1,
+                            sense: 1
+                        }
+                    }, {
+                        meta: {
+                            title: "旋风使者",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            accuracy: 1,
+                            sense: 1
+                        }
+                    }, {
+                        meta: {
+                            title: "微风人",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            accuracy: -1,
+                            sense: 2,
+                            acceptability: -1
+                        }
+                    }, {
+                        meta: {
+                            title: "微风使者",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            accuracy: 1,
+                            sense: 2
+                        }
+                    }
+                ],
+                require: true
+            },
+
+            // 嗅探兽
+            {
+                type: "choice",
+                id : "s4_004",
+                meta: {
+                    title: "选择译名",
+                    description: "一种友好生物，会时常嗅探空气，有时能刨挖出远古植物的种子。",
+                    image: "",
+                    original: "Sniffer",
+                    meta_id: "mob:sniffer"
+                },
+                options: [
+                    {
+                        meta: {
+                            title: "嗅探兽",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            sense: 2
+                        }
+                    }, {
+                        meta: {
+                            title: "嗅探者",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            sense: 1
+                        }
+                    }, {
+                        meta: {
+                            title: "嗅探器",
+                            description: "决定译名"
+                        },
+                        target_change: {
+                            sense: -1,
+                            acceptability: -1
+                        }
+                    }
+                ],
+                require: true
+            }
         ]
     }
 ];

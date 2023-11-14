@@ -69,6 +69,9 @@ class Player {
     }
 
     checkTargets() {
+        if (this.target.accuracy      > 7) this.target.accuracy      = 7;
+        if (this.target.sense         > 7) this.target.sense         = 7;
+        if (this.target.acceptability > 7) this.target.acceptability = 7;
         if (
             this.target.accuracy      < -7 ||
             this.target.sense         < -7 ||
