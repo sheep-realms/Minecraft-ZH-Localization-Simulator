@@ -757,7 +757,7 @@ const db_story = [
                         }
                     }, {
                         meta: {
-                            title: "地獄合金",
+                            title: "地狱合金",
                             description: "决定译名"
                         },
                         target_change: {
@@ -815,7 +815,7 @@ const db_story = [
                         }
                     }, {
                         meta: {
-                            title: "地獄合金",
+                            title: "地狱合金",
                             description: "决定译名"
                         },
                         target_change: {
